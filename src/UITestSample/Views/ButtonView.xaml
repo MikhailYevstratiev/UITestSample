@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="clr-namespace:UITestSample.Views"
+                       x:Class="UITestSample.Views.ButtonView"
+                       Title="Buttons Page">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Entry AutomationId="Entry1"
+                       WidthRequest="250"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <Button x:Name="button1"
+                        AutomationId="Button1"
+                        Text="Click me!"
+                        WidthRequest="150"
+                        HorizontalOptions="CenterAndExpand"/>
+
+                <Button AutomationId="Button2"
+                        Text="Go to List page"
+                        WidthRequest="150"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Command="{Binding GoToListPage}" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</views:BaseContentPage>
