@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
+variables:
+- group: Variables
+
 steps:
 # To manually select a Xamarin SDK version on the Microsoft-hosted macOS agent,
 # configure this task with the *Mono* version that is associated with the
@@ -17,9 +20,6 @@ steps:
 - script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_12_0
   displayName: 'Select the Xamarin SDK version'
   enabled: false
-
-variables:
-- group: Variables
 
 - task: NuGetToolInstaller@1
 
